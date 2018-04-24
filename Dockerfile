@@ -6,6 +6,7 @@ WORKDIR /home/proxy
 
 COPY dist/myproxy_linux .
 
+RUN chmod -R 777 ./
 RUN chown -R proxy:proxy ./
 USER proxy
 
