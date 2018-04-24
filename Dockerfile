@@ -4,10 +4,10 @@ RUN adduser -D proxy
 
 WORKDIR /home/proxy
 
-COPY dist/myproxy .
+COPY dist/myproxy_linux .
 
 RUN chown -R proxy:proxy ./
 USER proxy
 
 EXPOSE 8000
-ENTRYPOINT ["./myproxy"]
+ENTRYPOINT ["./myproxy_linux"]
